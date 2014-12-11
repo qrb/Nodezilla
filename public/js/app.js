@@ -16,7 +16,7 @@ $('body').on('click', '[data-button="configure"]', function(e){
 	$('[data-page="actions"]').fadeIn();
 
 
-	$.get( "/start/" + $('#url').val() + "/" + $('#virtualusers').val(), function( data ) {
+	$.get( "/start/" + encodeURIComponent($('#url').val()) + "/" + $('#virtualusers').val(), function( data ) {
 		displayData();
 	});
 
